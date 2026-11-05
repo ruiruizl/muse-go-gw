@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: muse-go-gw
+    runtime: docker
+    repo: https://github.com/ruiruizl/muse-go-gw
+    plan: free
+    healthCheckPath: /healthz
+    envVars:
+      - key: MUSE_COOKIE
+        value: hatch_sess=73518ef0-4729-4516-8b28-94b3abd8cb59.v1%3A75eMLhD2ZeXf5YtcPew0yo2KeUASxqRf86VSfEoHGXGKGYL0X1yUqiqJ4bo2Y008BasfiP3qnPSWxKCoEFF0fD2wrCzF8Z2GYQ0Xo9cZ5L994sqaewxrW8iReUUkHaCnTdyRkGJrVMY_s8qY7kXIHE7oKrH6qr4SSsTl5z4dR_dw-v4ybgo2C839MplH_msRFuCnCQudAXEq-aD1XciDSbWWZDhc0-TwkGZ6CztB1yuv_M_qoavej4cy6vvyzZqEd5Gr6u1ZcamLuTmP8OkQMuJukQc0ctPkVGTt75hUSSJy6TZxuXW3-RcwynwU-LmhvmgaawvV2TLwlveGNqM7F8YosEwmbCV92nx5c1c3qs10lrmH71UkXzZfgvHLKSN7HUUfWaF3PmKDrYbsrXVrUnP2RNBHpSc5eyDmbBiWptktCd9_VcUDShz82F3zvTROshjv5VM2oKj5PoNRtYDq4OWKcMM_Ib5WeJOFAU828G3cZC26MAqD3KCMEOC-aqMAPzyRvAIV-kyXTwwSuuh-1iA%3A6ENxrgIIQKheOMAO%3AyQZ4MwCOB-F4Bt7TEAaPfw.8NTUNV5JOMWB_EfElBW25OyGMP0mzItIrDCNPv3fnNU
+      - key: GATEWAY_KEY
+        value: muse-gw-2026
+      - key: PORT
+        value: "8080"
+      - key: MUSE_WS_FALLBACK
+        value: "1"
+      - key: MUSE_IMPERSONATE
+        value: chrome110
