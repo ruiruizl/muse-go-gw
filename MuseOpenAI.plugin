@@ -1,0 +1,19 @@
+#!name = Muse OpenAI 反代（muse-go-gw）
+#!desc = 把 api.openai.com 流量转发到 Muse 网关（muse-go-gw）。参数已预填，可直接导入使用。
+#!author = minis
+#!homepage = https://github.com/ruiruizl/muse-go-gw
+#!loon_version = 3.5.1(983)
+#!system = iOS,iPadOS,macOS
+#!date = 2026-11-06
+#!tag = AI,工具
+#!type = normal
+
+[Argument]
+base = input,"https://geology-fans-pushing-republicans.trycloudflare.com/v1",type=string,tag=网关地址,desc=Muse 网关 OpenAI 兼容地址（须含 /v1）
+key = input,"muse-gw-2026",type=string,tag=鉴权钥匙,desc=网关 Bearer 钥匙
+
+[Script]
+request if ${url} ~= /^https?:\/\/api\.openai\.com\/v1\/(chat\/completions|models|images|videos|media)(\/|\?|$)/ then script("https://raw.githubusercontent.com/ruiruizl/muse-go-gw/main/muse-openai.js", {${base}, ${key}}) with requires_body=true, timeout=600, tag="Muse 反代"
+
+[Mitm]
+hostname = api.openai.com
