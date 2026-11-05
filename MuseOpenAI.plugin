@@ -9,7 +9,7 @@
 #!type = normal
 
 [Argument]
-base = input,"https://geology-fans-pushing-republicans.trycloudflare.com/v1",type=string,tag=网关地址,desc=Muse 网关 OpenAI 兼容地址（须含 /v1）
+base = input,"https://clan-bowl-cho-veterinary.trycloudflare.com/v1",type=string,tag=网关地址,desc=Muse 网关 OpenAI 兼容地址（须含 /v1）
 key = input,"muse-gw-2026",type=string,tag=鉴权钥匙,desc=网关 Bearer 钥匙
 
 [Script]
